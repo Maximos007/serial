@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamentos Seriais</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #d3e1eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .corpo {
+            background: #fff;
+            width: 45vh;
+            height: 70vh;
+            max-width: 600px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            overflow: auto;
+        }
+
+        .corpo img {
+            width: 100%;
+            max-width: 35vh;
+            border-radius: 8px;
+        }
+
+        .corpo h1 {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        .corpo p {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .valor {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .loader div {
+            width: 12px;
+            height: 12px;
+            background: #27ae60;
+            border-radius: 50%;
+            margin: 0 4px;
+            animation: loader 0.8s infinite alternate;
+        }
+
+        .loader div:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loader div:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .corpo span {
+            margin-top: 5rem;
+        }
+
+        @keyframes loader {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.5);
+            }
+        }
+
+        @media (max-width: 620px) {
+            .corpo {
+                width: 90vw;
+                height: 80vh;
+                border-radius: 8px;
+                padding: 30px;
+            }
+
+            .corpo img {
+                max-width: 80%;
+            }
+
+            .corpo h1 {
+                font-size: 24px;
+            }
+
+            .corpo p {
+                font-size: 16px;
+            }
+
+            .valor {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="corpo">
+        <img src="picpay.png" alt="PicPay">
+        <h1>Corel Draw - WILCOM</h1>
+        <p>W***** A***** D** SANTOS</p>
+        <p class="valor">R$ 160,00</p>
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <span>Aguarde sua vez</span>
+    </div>
+
+    <!-- <script>
+        // JavaScript para simular espera
+        function simulateQueue() {
+            const loader = document.querySelector('.loader');
+            let personCount = 0;
+
+            const interval = setInterval(() => {
+                personCount++;
+                if (personCount > 15) {
+                    clearInterval(interval);
+                    alert('Todas as pessoas foram atendidas.');
+                    loader.style.display = 'none';
+                }
+            }, 1000); // Ajuste o tempo conforme necessário
+        }
+
+        window.onload = simulateQueue;
+    </script> -->
+</body>
+</html>
